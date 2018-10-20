@@ -327,6 +327,7 @@ class Connection extends EventEmitter {
         return
       }
       const str = data.toString('utf8')
+      console.log(str)
       this.socket.write(str, err => {
         if (err) {
           return reject(err)
